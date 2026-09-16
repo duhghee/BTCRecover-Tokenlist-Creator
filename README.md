@@ -32,6 +32,12 @@ sudo apt install python3-tk
 
 No third-party Python packages are imported by the program.
 
+## Clone Repo
+
+```bash
+git clone https://github.com/duhghee/Bip39-Mnemonic-Tokenlist-Creator.git
+```
+
 ## Recommended Workflow
 
 1. Start `tokenlist_creator.py`.
