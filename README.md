@@ -1,4 +1,5 @@
-# BTCRecover-Tokenlist-Creator-GUI
+# Bip39-Tokenlist-Creator
+
 Python/Tkinter desktop GUI for creating tokenlist.txt files for BTCRecover-compatible recovery workflows.  It does **not** perform wallet recovery itself. Its job is to turn a 12-position configuration into tokenlist text that can be consumed by compatible recovery software.
 
 The program supports:
@@ -16,7 +17,7 @@ The program supports:
 
 The GUI contains exactly 12 configurable rows (`ROWS = 12`).
 
-## 2. Requirements
+## Requirements
 
 - Python 3
 - Tkinter
@@ -31,8 +32,7 @@ sudo apt install python3-tk
 
 No third-party Python packages are imported by the program.
 
-
-Recommended Workflow
+## Recommended Workflow
 
 1. Start `tokenlist_creator.py`.
 2. Select the correct wordlist.
@@ -47,5 +47,3 @@ Recommended Workflow
 11. Save a JSON template if you want to reuse the setup.
 12. Generate `tokenlist.txt`.
 13. Test the resulting tokenlist with a known test case before starting a large recovery job.
-
-
