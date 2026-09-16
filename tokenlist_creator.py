@@ -127,7 +127,6 @@ class TokenlistGUI(tk.Tk):
 
         self.table.columnconfigure(3, weight=1)
 
-        # Load examples matching the two supplied templates as a convenient starting point.
         defaults = ["", "", "", "", "", "", "", "", "", "", "",]   
         for i, val in enumerate(defaults):
             self.rows[i]["value"].set(val)
@@ -160,7 +159,6 @@ class TokenlistGUI(tk.Tk):
         self.update_counts()
 
     def update_length_state(self, row):
-        """Enable Length only for the 'Words by length' source."""
         if row["source"].get() == "Words by length":
             row["length_box"].configure(state="readonly")
         else:
@@ -231,8 +229,6 @@ class TokenlistGUI(tk.Tk):
                 continue
 
             if row["behavior"].get() == "Fixed":
-                # Preserve one token per line for a single word, and space-separated
-                # alternatives for sets, matching BTCRecover tokenlist conventions.
                 anchored = [f"^{pos}^{w}" for w in tokens]
                 lines.append(" ".join(anchored))
             else:
